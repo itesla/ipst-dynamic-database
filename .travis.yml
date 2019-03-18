@@ -1,0 +1,15 @@
+language: java
+
+dist: trusty
+sudo: required
+
+jdk:
+- oraclejdk8
+
+install:
+# Build ipst-dynamic-simulation
+- git clone https://github.com/itesla/ipst-dynamic-simulation.git ipst/dynamic-simulation
+- pushd ipst/dynamic-simulation && mvn --batch-mode -DskipTests install && popd
+
+script:
+- mvn --batch-mode  -Pcheck clean verify
