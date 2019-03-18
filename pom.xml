@@ -331,6 +331,11 @@
             </dependency>
             <dependency>
                 <groupId>eu.itesla_project</groupId>
+                <artifactId>EU2Mod_MB</artifactId>
+                <version>${ipst-dynamic-simulation.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>eu.itesla_project</groupId>
                 <artifactId>eurostag-integration</artifactId>
                 <version>${ipst-dynamic-simulation.version}</version>
             </dependency>
