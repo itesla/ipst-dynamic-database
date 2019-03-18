@@ -1,0 +1,27 @@
+# Maven projects
+/distribution-dynamic-database/target/
+/iidm-ddb-ear/target/
+/iidm-ddb-ejb/target/
+/iidm-ddb-ejb-remote-client-wildfly/target/
+/iidm-ddb-eurostag-import-export/target/
+/iidm-ddb-eurostag-modelica-converter/target/
+/iidm-ddb-example-ejb-client/target/
+/iidm-ddb-modelica-import-export/target/
+/iidm-ddb-psse-import-export/target/
+/iidm-ddb-web/target/
+/target/
+
+# CMake projects
+/build/
+/thirdparty/build/
+
+# IntelliJ
+/.idea
+*.iml
+
+# iPST compilation settings
+install.cfg
+.project
+.classpath
+.settings
+
