@@ -90,6 +90,11 @@
     </build>
 
     <dependencies>
+        <dependency>
+            <groupId>eu.itesla_project</groupId>
+            <artifactId>EU2Mod_MB</artifactId>
+        </dependency>
+
         <!-- We depend on the EJB remote interfaces  of this application -->
         <dependency>
             <groupId>${project.groupId}</groupId>
@@ -101,12 +106,6 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>iidm-ddb-ejb-remote-client-wildfly</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>EU2Mod_MB</artifactId>
             <version>${project.version}</version>
         </dependency>
 

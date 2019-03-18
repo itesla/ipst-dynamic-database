@@ -90,6 +90,11 @@
             <groupId>com.powsybl</groupId>
             <artifactId>powsybl-tools</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>eu.itesla_project</groupId>
+            <artifactId>EU2Mod_MB</artifactId>
+        </dependency>
         <dependency>
             <groupId>eu.itesla_project</groupId>
             <artifactId>eurostag-integration</artifactId>
@@ -106,12 +111,6 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>iidm-ddb-ejb-remote-client-wildfly</artifactId>
             <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>EU2Mod_MB</artifactId>
-            <version>${project.version}</version>
-            <type>jar</type>
         </dependency>
         <dependency>
             <groupId>net.sf.supercsv</groupId>
