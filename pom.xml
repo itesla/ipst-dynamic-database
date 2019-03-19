@@ -250,7 +250,7 @@
             <!-- Define the version of the EJB jar so that we don't need to repeat ourselves in every module -->
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>iidm-ddb-ejb</artifactId>
+                <artifactId>ipst-ddb-ejb</artifactId>
                 <version>${project.version}</version>
                 <type>ejb</type>
             </dependency>
@@ -259,7 +259,7 @@
                 ourselves in every module -->
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>iidm-ddb-web</artifactId>
+                <artifactId>ipst-ddb-web</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
                 <scope>compile</scope>
@@ -338,12 +338,12 @@
             </dependency>
             <dependency>
                 <groupId>eu.itesla_project</groupId>
-                <artifactId>EU2Mod_MB</artifactId>
+                <artifactId>ipst-EU2Mod_MB</artifactId>
                 <version>${ipst-dynamic-simulation.version}</version>
             </dependency>
             <dependency>
                 <groupId>eu.itesla_project</groupId>
-                <artifactId>eurostag-integration</artifactId>
+                <artifactId>ipst-eurostag-integration</artifactId>
                 <version>${ipst-dynamic-simulation.version}</version>
             </dependency>
             <dependency>

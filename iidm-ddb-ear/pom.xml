@@ -17,9 +17,9 @@
         <version>0.5.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>iidm-ddb-ear</artifactId>
+    <artifactId>ipst-ddb-ear</artifactId>
     <packaging>ear</packaging>
-    <name>iidm ddb - ear package</name>
+    <name>ipst ddb - ear package</name>
 
     <profiles>
         <profile>
@@ -43,7 +43,7 @@
     </profiles>
 
     <build>
-        <finalName>iidm-ddb-ear</finalName>
+        <finalName>ipst-ddb-ear</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -56,20 +56,18 @@
                        are in easy way to package any libraries needed in the ear, and automatically
                        have any modules (EJB-JARs and WARs) use them -->
                     <defaultLibBundleDir>lib</defaultLibBundleDir>
-                    <applicationName>iidm-ddb-ear</applicationName>
+                    <applicationName>ipst-ddb-ear</applicationName>
                     <!-- to have the version out of the JNDI name -->
                     <fileNameMapping>no-version</fileNameMapping>
                     <modules>
-                        <!-- Default context root of the web app is /iidm-ddb-web.
+                        <!-- Default context root of the web app is the module id:  /ipst-ddb-web.
                         If a custom context root is needed, uncomment the following snippet to
                         register our War as a web module and set the contextRoot property -->
-                        <!--
                         <webModule>
                            <groupId>${project.groupId}</groupId>
-                           <artifactId>iidm-ddb-web</artifactId>
-                           <contextRoot>/iidm-ddb</contextRoot>
+                           <artifactId>ipst-ddb-web</artifactId>
+                           <contextRoot>/ipst-ddb</contextRoot>
                         </webModule>
-                        -->
                     </modules>
                 </configuration>
             </plugin>
@@ -80,12 +78,12 @@
         <!-- Depend on the ejb module and war so that we can package them -->
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>iidm-ddb-web</artifactId>
+            <artifactId>ipst-ddb-web</artifactId>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>iidm-ddb-ejb</artifactId>
+            <artifactId>ipst-ddb-ejb</artifactId>
             <type>ejb</type>
         </dependency>
     </dependencies>
