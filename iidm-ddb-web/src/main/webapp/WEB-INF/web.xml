@@ -21,7 +21,7 @@
     </context-param>
 
    
- <display-name>iidm-ddb-web</display-name>
+ <display-name>ipst-ddb-web</display-name>
  	<welcome-file-list>
 		<welcome-file>index.jsf</welcome-file>
 	</welcome-file-list>
