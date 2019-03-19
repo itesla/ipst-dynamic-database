@@ -48,12 +48,12 @@
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>iidm-ddb-eurostag-import-export</artifactId>
+            <artifactId>ipst-iidm-ddb-eurostag-import-export</artifactId>
             <version>${project.version}</version>
         </dependency>
         <!--dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>iidm-ddb-ear</artifactId>
+            <artifactId>ipst-iidm-ddb-ear</artifactId>
             <version>${project.version}</version>
             <type>ear</type>
         </dependency-->

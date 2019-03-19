@@ -17,7 +17,7 @@
         <version>0.5.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>iidm-ddb-ear</artifactId>
+    <artifactId>ipst-iidm-ddb-ear</artifactId>
     <packaging>ear</packaging>
     <name>iidm ddb - ear package</name>
 
@@ -80,12 +80,12 @@
         <!-- Depend on the ejb module and war so that we can package them -->
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>iidm-ddb-web</artifactId>
+            <artifactId>ipst-iidm-ddb-web</artifactId>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>iidm-ddb-ejb</artifactId>
+            <artifactId>ipst-iidm-ddb-ejb</artifactId>
             <type>ejb</type>
         </dependency>
     </dependencies>
