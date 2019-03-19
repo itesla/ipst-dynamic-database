@@ -250,7 +250,7 @@
             <!-- Define the version of the EJB jar so that we don't need to repeat ourselves in every module -->
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>ipst-iidm-ddb-ejb</artifactId>
+                <artifactId>ipst-ddb-ejb</artifactId>
                 <version>${project.version}</version>
                 <type>ejb</type>
             </dependency>
@@ -259,7 +259,7 @@
                 ourselves in every module -->
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>ipst-iidm-ddb-web</artifactId>
+                <artifactId>ipst-ddb-web</artifactId>
                 <version>${project.version}</version>
                 <type>war</type>
                 <scope>compile</scope>
