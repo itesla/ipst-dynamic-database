@@ -71,6 +71,10 @@
             <artifactId>auto-service</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.powsybl</groupId>
             <artifactId>powsybl-commons</artifactId>
         </dependency>
@@ -98,6 +102,11 @@
         <dependency>
             <groupId>eu.itesla_project</groupId>
             <artifactId>eurostag-integration</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
         </dependency>
 
         <!-- We depend on the EJB remote interfaces  of this application -->

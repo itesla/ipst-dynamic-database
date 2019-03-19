@@ -48,7 +48,7 @@
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>iidm-ddb-ejb-remote-client-wildfly</artifactId>
+            <artifactId>iidm-ddb-eurostag-import-export</artifactId>
             <version>${project.version}</version>
         </dependency>
         <!--dependency>
