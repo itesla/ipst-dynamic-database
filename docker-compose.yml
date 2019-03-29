@@ -1,0 +1,42 @@
+version: "2.1"
+
+services:
+  app:
+    container_name: "app"
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      - WILDFLY_USER=admin
+      - WILDFLY_PASS=adminPassword
+      - WILDFLY_USERAPP=user
+      - WILDFLY_USERPWD=password
+      - DB_NAME=ipstddb
+      - DB_USER=ipst
+      - DB_PASS=ipst
+      - DB_URI=db:3306
+    depends_on:
+      - db
+    ports:
+      - "8080:8080" # application
+      - "9990:9990" # admin console
+
+  db:
+    container_name: "db"
+    image: "mysql:5.7.25"
+    environment:
+      - MYSQL_DATABASE=ipstddb
+      - MYSQL_USER=ipst
+      - MYSQL_PASSWORD=ipst
+      - MYSQL_ROOT_PASSWORD=supersecret
+    volumes:
+      - dbdata:/var/lib/mysql/
+    ports:
+      - "3306:3306"
+
+networks:
+    default:
+        driver: bridge
+
+volumes:
+    dbdata:
