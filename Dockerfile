@@ -60,6 +60,9 @@ RUN echo "=> Starting WildFly server" && \
 # Expose http and admin ports
 EXPOSE 8080 9990
 
+#copy the DDB ear file to the wildfly's deployment directory
+COPY ./iidm-ddb-ear/target/ipst-ddb-ear.ear /opt/jboss/wildfly/standalone/deployments 
+
 #echo "=> Restarting WildFly"
 # Set the default command to run on boot
 # This will boot WildFly in the standalone mode and bind to all interfaces
