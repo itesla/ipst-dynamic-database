@@ -8,7 +8,7 @@ jdk:
 
 install:
 # Build ipst-dynamic-simulation
-- git clone --branch align_to_powsybl_core_2_4_1 https://github.com/itesla/ipst-dynamic-simulation.git ipst/dynamic-simulation
+- git clone https://github.com/itesla/ipst-dynamic-simulation.git ipst/dynamic-simulation
 - pushd ipst/dynamic-simulation && mvn --batch-mode -DskipTests install && popd
 
 script:
