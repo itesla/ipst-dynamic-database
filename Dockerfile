@@ -21,15 +21,12 @@ ENV JBOSS_CLI /opt/jboss/wildfly/bin/jboss-cli.sh
 ENV DEPLOYMENT_DIR /opt/jboss/wildfly/standalone/deployments/
 #ENV JAVA_OPTS
 
-# Setting up WildFly Admin Console
-RUN echo "=> Adding WildFly administrator user"
-RUN $JBOSS_HOME/bin/add-user.sh -u $WILDFLY_USER -p $WILDFLY_PASS --silent
-RUN echo "=> Adding WildFly app user"
-RUN $JBOSS_HOME/bin/add-user.sh -a -u $WILDFLY_USERAPP -p $WILDFLY_USERPWD -g $WILDFLY_USERGROUP --silent
-
-
-# Configure Wildfly server
-RUN echo "=> Starting WildFly server" && \
+# Setting up WildFly
+RUN echo "=> Adding WildFly administrator user" && \
+      $JBOSS_HOME/bin/add-user.sh -u $WILDFLY_USER -p $WILDFLY_PASS --silent && \
+    echo "=> Adding WildFly app user" && \
+      $JBOSS_HOME/bin/add-user.sh -a -u $WILDFLY_USERAPP -p $WILDFLY_USERPWD -g $WILDFLY_USERGROUP --silent && \
+    echo "=> Starting WildFly server" && \
       bash -c '$JBOSS_HOME/bin/standalone.sh &' && \
     echo "=> Waiting for the server to boot" && \
       bash -c 'until `$JBOSS_CLI -c ":read-attribute(name=server-state)" 2> /dev/null | grep -q running`; do echo `$JBOSS_CLI -c ":read-attribute(name=server-state)" 2> /dev/null`; sleep 1; done' && \
@@ -63,7 +60,6 @@ EXPOSE 8080 9990
 #copy the DDB ear file to the wildfly's deployment directory
 COPY ./iidm-ddb-ear/target/ipst-ddb-ear.ear /opt/jboss/wildfly/standalone/deployments 
 
-#echo "=> Restarting WildFly"
 # Set the default command to run on boot
 # This will boot WildFly in the standalone mode and bind to all interfaces
 CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]
