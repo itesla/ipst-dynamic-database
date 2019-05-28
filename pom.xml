@@ -72,7 +72,7 @@
         <jimfs.version>1.1</jimfs.version>
         <junit.version>4.12</junit.version>
         <logback.version>1.1.8</logback.version>
-        <powsybl.version>2.4.1</powsybl.version>
+        <powsybl.version>2.5.0</powsybl.version>
         <shrinkwrap.version>1.2.6</shrinkwrap.version>
         <slf4j.version>1.7.22</slf4j.version>
         <supercsv.version>2.4.0</supercsv.version>

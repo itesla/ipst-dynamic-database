@@ -2354,7 +2354,7 @@ public class DdbDtaImpExp implements DynamicDatabaseClient {
                     for (VoltageLevel station : network.getVoltageLevels()) {
                         if (station.getName().equals(connectingStation)) {
                             // Looking for shunts at the connecting station
-                            for (ShuntCompensator shunt : station.getShunts()) {
+                            for (ShuntCompensator shunt : station.getShuntCompensators()) {
                                 bankInAcmc.add(iidm2eurostagId.get(shunt.getId()));
                             }
                         }
