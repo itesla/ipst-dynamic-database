@@ -13,7 +13,7 @@
 
     <groupId>eu.itesla_project</groupId>
     <artifactId>ipst-dynamic-database</artifactId>
-    <version>0.6.0-SNAPSHOT</version>
+    <version>0.7.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>ipst dynamic database</name>
@@ -68,7 +68,7 @@
         <commonscli.version>1.3.1</commonscli.version>
         <guava.version>20.0</guava.version>
         <hibernate.version>4.3.5.Final</hibernate.version>
-        <ipst-dynamic-simulation.version>0.6.0-SNAPSHOT</ipst-dynamic-simulation.version>
+        <ipst-dynamic-simulation.version>0.7.0-SNAPSHOT</ipst-dynamic-simulation.version>
         <jimfs.version>1.1</jimfs.version>
         <junit.version>4.12</junit.version>
         <logback.version>1.1.8</logback.version>
