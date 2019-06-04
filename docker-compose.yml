@@ -6,6 +6,10 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
+      args:
+          # If you are behind a proxy, this will be needed for the build
+          # Note: http_proxy is one of the predefined ARGs of docker
+          - http_proxy
     environment:
       - WILDFLY_USER=admin
       - WILDFLY_PASS=adminPassword

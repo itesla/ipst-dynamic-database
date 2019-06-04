@@ -31,7 +31,9 @@ RUN echo "=> Adding WildFly administrator user" && \
     echo "=> Waiting for the server to boot" && \
       bash -c 'until `$JBOSS_CLI -c ":read-attribute(name=server-state)" 2> /dev/null | grep -q running`; do echo `$JBOSS_CLI -c ":read-attribute(name=server-state)" 2> /dev/null`; sleep 1; done' && \
     echo "=> Downloading MySQL driver" && \
+      export http_proxy=${http_proxy} && \
       curl --location --output /tmp/mysql-connector-java-${MYSQL_VERSION}.jar --url http://search.maven.org/remotecontent?filepath=mysql/mysql-connector-java/${MYSQL_VERSION}/mysql-connector-java-${MYSQL_VERSION}.jar && \
+      unset http_proxy && \
     echo "=> Adding MySQL module" && \
       $JBOSS_CLI --connect --command="module add --name=com.mysql --resources=/tmp/mysql-connector-java-${MYSQL_VERSION}.jar --dependencies=javax.api,javax.transaction.api" && \
     echo "=> Adding MySQL driver" && \
@@ -58,7 +60,7 @@ RUN echo "=> Adding WildFly administrator user" && \
 EXPOSE 8080 9990
 
 #copy the DDB ear file to the wildfly's deployment directory
-COPY ./iidm-ddb-ear/target/ipst-ddb-ear.ear /opt/jboss/wildfly/standalone/deployments 
+COPY ./iidm-ddb-ear/target/ipst-ddb-ear.ear /opt/jboss/wildfly/standalone/deployments
 
 # Set the default command to run on boot
 # This will boot WildFly in the standalone mode and bind to all interfaces

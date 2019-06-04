@@ -20,20 +20,21 @@ To simplify the installation and setup, a set of configurations are  provided, a
 2. a set of .jar files, provides the client code to connect and use the server-side services and complements a powsybl-core + dynamic-simulation installation.
    copy all the jars from *./distribution-dynamic-database/target/ipst-distribution-dynamic-database-IPST-DYNAMIC-DATABASE-VERSION-full/ipst/share/java* to the powsybl-core's *share/java* directory
 
-   
+
 ##To start docker:
 ```bash
 docker-compose up
 ```
 
-###Notes: 
-Because all the required components (wildfly, mysql) have to be downloaded, the first run could take some time to execute;
-Later executions will be faster. Option *docker-compose up -d* executes docker in background. 
+###Notes:
+ * Because all the required components (wildfly, mysql) have to be downloaded, the first run could take some time to execute;
+Later executions will be faster. Option *docker-compose up -d* executes docker in background.
+ * In case you build the image behind a proxy (corporate proxy for example), you will need to define the environment variable `http_proxy` before building
 
 
 ##To shutdown docker
 ```bash
-docker-compose down 
+docker-compose down
 ```
 (or, CTRL-C in the same terminal, if it runs in foreground)
 
