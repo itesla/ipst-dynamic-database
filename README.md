@@ -3,11 +3,11 @@ An application to store data necessary for dynamic simulation (regulations ...)
 
 
 
-#Quickstart
+# Quickstart
 
 Required: build and ipst-dynamic-simulation project (https://github.com/itesla/ipst-dynamic-simulation.git)
 
-##Build and install
+## Build and install
 
 ```bash
 mvn clean install
@@ -21,24 +21,25 @@ To simplify the installation and setup, a set of configurations are  provided, a
    copy all the jars from *./distribution-dynamic-database/target/ipst-distribution-dynamic-database-IPST-DYNAMIC-DATABASE-VERSION-full/ipst/share/java* to the powsybl-core's *share/java* directory
 
 
-##To start docker:
+## To start docker:
 ```bash
 docker-compose up
 ```
 
-###Notes:
+### Notes:
  * Because all the required components (wildfly, mysql) have to be downloaded, the first run could take some time to execute;
 Later executions will be faster. Option *docker-compose up -d* executes docker in background.
  * In case you build the image behind a proxy (corporate proxy for example), you will need to define the environment variable `http_proxy` before building
 
 
-##To shutdown docker
+## To shutdown docker:
 ```bash
 docker-compose down
 ```
 (or, CTRL-C in the same terminal, if it runs in foreground)
 
-##To shutdown docker and clean everything:
+
+## To shutdown docker and clean everything:
 Shutdown and remove the dynamic-database images, including the volume with the database content
 ```bash
 docker-compose down --rmi all -v
